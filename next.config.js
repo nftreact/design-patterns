@@ -27,6 +27,11 @@ const generateAppDirEntry = (entry) => {
   });
 };
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+
 const nextConfig = {
   experimental: {
     appDir: true,
@@ -47,4 +52,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPWA(nextConfig);
+module.exports = withBundleAnalyzer(withPWA(nextConfig));
