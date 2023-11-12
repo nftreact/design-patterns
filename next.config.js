@@ -39,8 +39,8 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    domains: ['picsum.photos'],
-    hostname: 'picsum.photos',
+    domains: ["www.remasgallery.com", "portal.remasgallery.com"],
+    // hostname: ["www.remasgallery.com", "portal.remasgallery.com"],
   },
   webpack(config) {
     if (!isDev) {
